@@ -1,0 +1,244 @@
+#main-div {
+  position: relative;
+  margin: auto;
+  min-height: 100vh;
+}
+
+#main-div .App-logo {
+  -webkit-animation: mymove infinite 5s linear;
+          animation: mymove infinite 5s linear;
+  height: 40vh;
+  pointer-events: none;
+  position: absolute;
+  right: 10vw;
+  top: 30vh;
+  overflow-x: hidden;
+}
+
+#main-div .title {
+  position: absolute;
+  left: 10px;
+  font-size: 3vw;
+  bottom: 5px;
+}
+
+.App-logo-fade {
+  pointer-events: none;
+  position: absolute;
+  top: 30vh;
+  transform: translate(-100vw, 0);
+  -webkit-transform: translate(-100vw, 0);
+  /** Safari & Chrome **/
+  -o-transform: translate(-100vw, 0);
+  /** Opera **/
+  -moz-transform: translate(-100vw, 0);
+  /** Firefox **/
+  -webkit-transition: -webkit-transform 4s ease;
+  transition: -webkit-transform 4s ease;
+  transition: transform 4s ease;
+  transition: transform 4s ease, -webkit-transform 4s ease;
+}
+
+#landpage {
+  background: url(./newback3.jpg) no-repeat;
+  background-size: 100% 100%;
+  min-height: 100vh;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+@-webkit-keyframes mymove {
+  0% {
+    top: 25vh;
+  }
+  50% {
+    top: 30vh;
+  }
+  100% {
+    top: 25vh;
+  }
+}
+
+@keyframes mymove {
+  0% {
+    top: 25vh;
+  }
+  50% {
+    top: 30vh;
+  }
+  100% {
+    top: 25vh;
+  }
+}
+
+@-webkit-keyframes slide-up {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.introduction {
+  margin: 20px;
+  line-height: 2.5;
+  -webkit-animation: slide-up 1s ease;
+          animation: slide-up 1s ease;
+}
+
+#asside {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.19);
+  border-left: 1px solid rgba(0, 0, 0, 0.125);
+  overflow: auto;
+}
+
+#asside a {
+  color: #26a69a;
+}
+
+.centered {
+  margin: auto;
+  width: 300px;
+  text-align: center;
+}
+
+.part-bottom {
+  width: 97%;
+  -webkit-animation: slide-up 1s ease;
+          animation: slide-up 1s ease;
+}
+
+#sign {
+  float: right;
+  margin: 10px;
+}
+
+.login, .signin {
+  -webkit-animation: slide-up 0.4s ease;
+          animation: slide-up 0.4s ease;
+  width: 90%;
+  margin: auto;
+}
+
+.login .button, .signin .button {
+  margin-bottom: 20px;
+}
+
+.login .title, .signin .title {
+  font-size: 4vh;
+  font-weight: bold;
+}
+
+.login svg, .signin svg {
+  float: left;
+  margin: 10px auto 0 0;
+  color: black;
+  font-size: 26px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50px;
+}
+
+.login svg:hover, .signin svg:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+@media (max-width: 500px) {
+  #main-div {
+    display: none !important;
+  }
+  #asside {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  #pagesMenu button {
+    display: none !important;
+  }
+  #pagesMenu .tab {
+    width: 75% !important;
+  }
+  #staticMenu {
+    font-size: 10px !important;
+  }
+  #staticMenu button {
+    display: none !important;
+  }
+}
+
+@media (max-width: 650px) and (min-width: 450px) {
+  #main-div .App-logo, #main-div .App-logo-fade {
+    height: 200px !important;
+    width: 300px !important;
+    right: 7% !important;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 651px) {
+  #main-div .App-logo, #main-div .App-logo-fade {
+    height: 200px !important;
+    width: 400px !important;
+    right: 7% !important;
+  }
+}
+
+@media (max-width: 940px) and (min-width: 750px) {
+  #main-div .App-logo, #main-div .App-logo-fade {
+    height: 200px !important;
+    width: 450px !important;
+    right: 7% !important;
+  }
+}
+
+@media (min-width: 950px) {
+  #main-div .App-logo, #main-div .App-logo-fade {
+    height: 200px !important;
+    width: 550px !important;
+    right: 4% !important;
+  }
+}
+/*# sourceMappingURL=landpage.css.map */
